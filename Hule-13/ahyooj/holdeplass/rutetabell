@@ -1,0 +1,33 @@
+#!/bin/bash
+
+cat << EOF
+Rutetabell
+----------
+01| 30
+02| 
+03| 
+04| 
+05|
+06| 15,30,45
+07| 15,30,45
+08| 15,30,45
+09| 30
+10| 30
+11| 30
+12| 30
+
+Klokken er 00:54, du ser at neste bussen kan ta deg et stykke paa riktig
+vei, og du bestemmer deg for aa sette paa en alarm og ta deg en liten lur.
+Hvilket klokkeslett setter du alarmen til?
+
+EOF
+read RESP
+
+if [ "$RESP" = "01:30" ] || [ "$RESP" = "0130" ]; then
+    ln -fs /home/261656/spill/Hule-13/ahyooj/parkeringsplass /home/261656/spill/Hule-13/ahyooj/holdeplass/buss
+    cat << EOF
+    Du våkner brått av en kjent melodi, og en glad bussjåfør åpner døren for deg.
+EOF
+else
+    echo "Du faar en folelse av at det tidspunktet er feil, og du er redd for aa sove for lenge."
+fi

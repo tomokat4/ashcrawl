@@ -1,0 +1,28 @@
+I dette spillet er hovedmaalet ditt aa komme deg hjem.
+
+Det er en kald vinterkveld i Vestfold, og du har tilbrakt den storre
+delen av kvelden i godt lag, med latter og god drikke.
+
+Dere har vaert ute paa byen, og spesielt du har latt tiden lope fra deg.
+Siste buss har gaatt, og i god typisk studenttradisjon har du ikke penger
+til taxi. 
+
+Reisen hjem vil bli et eventyr, og mange utfordringer staar mellom deg
+og den gode varme sengen paa campus.
+
+Det er snart eksamen, og i den intense oevingen til eksamen har spesielt
+commandline argumenter og programmer klistret tilstrekkelig at du tenker
+i bash og cli naar du gjoer avgjoerlsene dine paa hjemreisen.
+
+Naar du vil SE hvor du er, og hvilke alternativer du har; benytt ls.
+Du har i hoyeste grad paa olbriller, og ls -h vil gi deg innsikt i 
+hvordan du kan kontrollere disse brillene.
+
+Dersom du vil flytte deg mellom omraader og rom, maa du sjangle deg frem
+og tilbake ved aa kommandere fottene dine med cd <dit du vil bevege deg>.
+
+En bedugget dataingenioerstudent har tilgang paa et bredt utvalg av 
+kommandoer og mentale/fysiske prosesser du vil utforske i dette spillet
+
+Dersom du vil se hvor mange utfordringer du har klart paa hjemreisen din
+skriv ./poengoversikt naar du befinner deg mellom utfordringene.
