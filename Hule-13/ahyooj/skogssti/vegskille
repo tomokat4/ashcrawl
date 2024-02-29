@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cat << EOF
+Foran deg har du et utvalg veier som går i nesten alle himmelretningene, hvilken retning velger du å gå?
+EOF
+
+read RESP
+
+if [ "$RESP" = "NORD" -o "$RESP" = "Nord" ]; then
+	echo "3" > .poeng_$SPILLER
+	cat << EOF
+Du følger stien som går  nordover, og merker at dette var riktig avgjørelse.
+Etter en kort tid merker du at veien krenger, og du går i riktig retning campus.
+EOF
+
+else
+	rm /home/261656/spill/Hule-13/ahyooj/holdeplass/.poeng_$SPILLER
+	cat << EOF
+Dette var overhodet ikke riktig vei, og du merker at progresjonen din i retning campus ikke går rett vei.
+En merkelig f�lelse av at du må besøke noen av de forrige destinasjonene på reisen bobler opp.
+EOF
+fi

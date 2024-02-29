@@ -1,0 +1,24 @@
+#!/bin/bash
+
+cat << EOF
+En godt sliten mann står foran deg.
+Han virker ikke helt bevisst på at du står foran han, men du skulle gjerne stilt han et spørsmål eller to.
+Skal du prøve å vekke han?
+EOF
+
+read RESP
+
+if [ "$RESP" = "y" ] || [ "$RESP" = "Y" ]; then
+    if [ -e "kaffekoppbenk" ]; then
+        echo "Mannen sier bløtt: 'Ahh, du mekka kaffekoppen, takk. Hvis du vil komme deg trygt igjennom skogen så finner du et kart over skogen bak benken her.'"
+        rm kaffekoppbenk
+	echo "2" > .poeng_$SPILLER
+	echo "Dette var sannelig et nyttig kart, du ser at veien du må følge igjennom skogen går nordover" > kart_$SPILLER
+    else
+        echo "Mannen grynter irritert: 'Gi meg kafffffi.'"
+        echo "Du legger merke til at han peker på en kaffekopp et stykke lenger bort, på et biltak."
+        touch kaffekoppbil
+    fi
+else
+    echo "Du er litt varsom med å vekke en sovende mann, så sent på natten."
+fi
