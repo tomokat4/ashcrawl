@@ -1,0 +1,14 @@
+#!/bin/bash
+
+clear
+echo "Velkommen til Vestfold Eventyr!"
+read -p "Skriv inn ditt kallenavn: " SPILLER
+export SPILLER
+
+# Change directory to the desired location
+cd /home/261660/spill/Hule-13/jusien || exit 1
+
+clear
+echo "Velkommen, $SPILLER! Dette er ditt start punkt i spillet. Du har havnet i Vestfold etter en lang natt ute. Din oppgave er å finne veien tilbake til campus ved hjelp av kommandolinjeferdighetene dine. Lykke til!"
+echo " "
+echo "Bruk ls for å se de ulike stedene du kan gå"
