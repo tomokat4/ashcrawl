@@ -24,5 +24,8 @@ og tilbake ved aa kommandere fottene dine med cd <dit du vil bevege deg>.
 En bedugget dataingenioerstudent har tilgang paa et bredt utvalg av 
 kommandoer og mentale/fysiske prosesser du vil utforske i dette spillet
 
+For aa begynne eventyret, gi din karakter et navn ved aa skrive;
+export SPILLER="Navnet ditt" med navnet ditt uten " " paa sidene.
+
 Dersom du vil se hvor mange utfordringer du har klart paa hjemreisen din
 skriv ./poengoversikt naar du befinner deg mellom utfordringene.

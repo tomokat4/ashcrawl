@@ -24,7 +24,7 @@ EOF
 read RESP
 
 if [ "$RESP" = "01:30" ] || [ "$RESP" = "0130" ]; then
-    ln -fs /home/261656/spill/Hule-13/ahyooj/parkeringsplass /home/261656/spill/Hule-13/ahyooj/holdeplass/buss
+    ln -fs /home/261656/spill/Hule-13/jusien/torget /home/261656/spill/Hule-13/ahyooj/holdeplass/
     echo 1 >> .poeng_$SPILLER 
     cat << EOF
     Du våkner brått av en kjent melodi, og en glad bussjåfør åpner døren for deg.

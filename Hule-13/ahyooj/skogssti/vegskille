@@ -6,7 +6,7 @@ EOF
 
 read RESP
 
-if [ "$RESP" = "NORD" -o "$RESP" = "Nord" ]; then
+if [ "$RESP" = "Nord" -o "$RESP" = "nord" ]; then
 	echo "3" > .poeng_$SPILLER
 	cat << EOF
 Du følger stien som går  nordover, og merker at dette var riktig avgjørelse.

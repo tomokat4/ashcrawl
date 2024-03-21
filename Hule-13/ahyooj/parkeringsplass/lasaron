@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cat << EOF
-En godt sliten mann står foran deg.
+En godt sliten mann sitter foran deg
 Han virker ikke helt bevisst på at du står foran han, men du skulle gjerne stilt han et spørsmål eller to.
 Skal du prøve å vekke han?
 EOF
