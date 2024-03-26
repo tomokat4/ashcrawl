@@ -1,5 +1,0 @@
-Av en eller annen grunn så vil ikke ./start endre filkatalogen til der spillet starter.
-
-Så for at spillet skal starte i riktig katalog:
-
-bruk kommandoen: source start

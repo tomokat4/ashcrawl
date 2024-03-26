@@ -1,5 +1,4 @@
-
-#!/bin/bash
+\#!/bin/bash
 
 # Sjekker om den skjulte filen ".Ett_par_fete_air_jordans" eksisterer i gjeldende katalog
 if [ ! -f ".Ett_par_fete_air_jordans" ]; then
@@ -21,14 +20,12 @@ read -p "Velg et alternativ (1, 2 eller 3): " VALG
 if [ "$VALG" -eq 1 ]; then
     cat << EOF
 Den store gutten dæjser i bakken og roper på morra si, de andre guttene løper av gårde og sverger å aldri gjøre noe sånt igjen. Hunden kommer bort til deg og slikker deg.
-En vakker dame kommer løpende, det er eieren av hunden. Hun gir deg et kyss på kinnet og telefonnummeret hennes. 
+En vakker dame kommer løpende, det er eieren av hunden. Hun gir deg et kyss på kinnet og telefonnummeret hennes. echo "3" > .poeng_$SPILLER
 
 Du er nå klar for å komme deg videre på vei hjem, kom deg til holdeplassen og sjekk om det går no buss.
 
 EOF
 ln -s /home/261660/spill/Hule-13/ahyooj/holdeplass /home/261660/spill/Hule-13/jusien/torget/holdeplass
-echo "3" > .poeng_$SPILLER
-
 elif [ "$VALG" -eq 2 ]; then
     cat << EOF
 Guttene blir redde og sier "hva faaaaen" mens de løper avgårde. Dessverre skremte du også hunden, og den forsvinner avgårde. Litt av en helt du er!

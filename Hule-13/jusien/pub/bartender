@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Velkommen til utfordringen på The Rusty Tankard!
+
+echo "Bartenderen ser på deg og sier: 'Hva er alltid foran deg, men du kan aldri se det?'"
+read -p "Ditt svar: " svar
+
+# Konverter svaret til små bokstaver
+svar=$(echo "$svar" | tr '[:upper:]' '[:lower:]')
+
+# Sjekk om spilleren har gitt et svar
+if [ -z "$svar" ]; then
+    echo "Du må svare på spørsmålet."
+    exit 1
+fi
+
+# Sjekk om svaret er riktig
+if [ "$svar" == "fremtiden" ]; then
+    echo "Bartenderen smiler bredt og gir deg en belønning."
+    # Lagre poengene til spilleren i en fil
+    echo "1" > ".poeng_$SPILLER"
+else
+    echo "Bartenderen rister på hodet. 'Det var ikke riktig. Prøv igjen en annen gang.'"
+fi
