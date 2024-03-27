@@ -1,0 +1,34 @@
+#!/bin/bash
+
+echo "Velkommen til utfordringen på Tønsberg Brygge!"
+
+echo "Er du klar for en utfording tapre kriger?! sier damen som spiller en slags vikigrolle for barn nede ved skipet"
+
+
+echo "Hva heter en av mest kjente vikingskipene som ble funnet akkurat her i Tønsberg?"
+read -p "Ditt svar: " svar
+
+# Konverter svaret til små bokstaver
+svar=$(echo "$svar" | tr '[:upper:]' '[:lower:]')
+
+# Sjekk om spilleren har gitt et svar
+if [ -z "$svar" ]; then
+    echo "Du må svare på spørsmålet."
+    exit 1
+fi
+
+# Sjekk om svaret er riktig
+if [ "$svar" == "osebergskipet" ]; then
+    echo "Gratulerer! Du har svart riktig."
+    # Øk spillerens poeng her
+    echo "1" > ".poeng_$SPILLER"
+else
+    echo "Dessverre, det var feil. Kanskje du kan finne ett hint ett sted?."
+    # Fjern ett poeng fra spilleren
+    if [ -f ".poeng_$SPILLER" ]; then
+        poeng=$(cat ".poeng_$SPILLER")
+        if [ "$poeng" -gt 0 ]; then
+            echo $((poeng - 1)) > ".poeng_$SPILLER"
+        fi
+    fi
+fi

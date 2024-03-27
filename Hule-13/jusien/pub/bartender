@@ -1,3 +1,4 @@
+
 #!/bin/bash
 
 # Velkommen til utfordringen på The Rusty Tankard!
@@ -17,8 +18,12 @@ fi
 # Sjekk om svaret er riktig
 if [ "$svar" == "fremtiden" ]; then
     echo "Bartenderen smiler bredt og gir deg en belønning."
-    # Lagre poengene til spilleren i en fil
-    echo "1" > ".poeng_$SPILLER"
+mv .maleri maleri
+chmod +r maleri
 else
     echo "Bartenderen rister på hodet. 'Det var ikke riktig. Prøv igjen en annen gang.'"
+    # Trekk fra ett poeng for feil svar
+    # Forutsetter at poengene er lagret i filen .poeng_$SPILLER
+    poeng=$(cat ".poeng_$SPILLER")
+    echo "$((poeng - 1))" > ".poeng_$SPILLER"
 fi
