@@ -1,32 +1,34 @@
-du snakker med annsatt han sprø om va du vill kjøpe noe (bare snus)
+#!/bin/bash
+
+cat << EOF
+Du kjenner fristelsen av snus, men er usikker på om du vil betale.
+Du ser at du ganske lett kan ta en snus ut av skapet, og mannen bak kassa virker ikke til å følge med.
+Vil du prøve å stjele snusen eller skal du prikke mannen på skulderen og betale?
+
+Skriv '1' for å stjele, '2' for å betale normalt
+EOF
+read VALG
+
+if [ "$VALG" = 1 ]; then
+    rm /home/260841/spill/Hule-13/iheitu/karok_senen/.poeng_$SPILLER
+    cat << EOF
+Du feilet. Mistede poeng fra karaoke.
+EOF
+    exit
+
+elif [ "$VALG" = 2 ]; then
+    if [ -e /home/260841/spill/Hule-13/iheitu/karok_senen/.poeng_$SPILLER ]; then
+	echo "2" > .poeng_$SPILLER
+        cat << EOF
+Du kjøper snus.
+EOF
+    else
+        cat << EOF
+Du er blakk.
+EOF
+    fi
+fi
 
 
-vil du stjele?
 
-ja  (slette poeng fra karoke)
-
-nei:
-
-har du penger? (auto skjekk) har du poeng i karoke mappa
-
-nei: 
-	det ser desvere ikke ut til at du har penger. 
-	kansje du burde prøve å "sygne" litt penger inn i verden
-
-
-
-ja:
-	du snakker med kassa mannen og vil ha en bakke snus.
-	vet du vilken pakke alle raanere liker? (auto sjekk)
-	ja: 
-		kjøp general løs
-	
-
-	nei:
-		du  vill ha snus men vet ikke vilken snus raanere liker
-		du spør kassa mannen, men han kjeder seg på jobb så vill ikke 
-		si det til deg før du gjetter riktig på en runde pm stein saks papir
-
-
-	du kjøper snus og får påeng i denne mappa
 
