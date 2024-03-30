@@ -1,0 +1,30 @@
+#!/bin/bash
+
+cat << EOF
+Du hører noe vibrere med en rytme. Det høres ut som det kommer nærmere... 
+Du snur deg og ser en hvit Volvo 960. Med musikk på full guffe og en basskasse i 
+bagasjerommet som får registreringskiltet til å riste mot bakluka, er den på vei mot deg.
+Du bruker noen sekunder på å finne fram tommelen og mentalt forberede deg på en samtale. 
+Snakk sakte og forståelig. Dette klarer du!
+
+Råneren stopper og ruller ned vinduet, du blir møtt med en vegg av bass. 
+Hun skrur ned musikken og sier:
+"Hei du! Jeg skal rett til et rånertreff, men jeg har en ledig plass bak om du vil bli med?"
+
+Vil du sitte på til rånertreffet? [y/n]:
+EOF
+read RESP
+
+if ["$RESP" = "y"]; then
+	ln -fs /home/261675/spill/Hule-13/iheitu/raanertreff /home/261675/spill/Hule-13/amieda/pirattaxi/
+	echo 1 >> .poeng_$SPILLER
+	cat << EOF
+	Etter en liten kjøretur med dunkende musikk og roping kommer dere fram til treffet.
+	Ørene dine suser, treffet er fullt av biler med bagasjerom og dører åpne for å spille høyest mulig.
+	Festen fortsetter!
+EOF
+else
+	cat << EOF
+	Frisk luft er bedre enn Wunderbaum lukt!
+EOF
+fi
