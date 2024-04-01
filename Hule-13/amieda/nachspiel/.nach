@@ -1,0 +1,37 @@
+#!/bin/bash
+
+cat << EOF
+Usikker på hvor du er , og hvordan du har kommet deg hit, ser du en fest i et svært og flott hus.
+Du ser en gjeng som røyker utenfor en åpen inngangsdør. En av dem kjenner deg igjen fra tidligere i kveld.
+Det må være han som inviterte deg!
+Dere går inn og han gir deg noe å drikke. Stemningen er helt på topp og musikken er bra,
+hvorfor ikke la kvelden fortsette litt til?
+EOF
+
+sleep 10
+
+cat << EOF
+Nachspielet roer seg. Du har nå øynene like mye åpne som lukket.
+Festverten ser på deg og sier:
+"Jeg tror vi avslutter mens leken er god, hvor skal du nå?"
+
+1: "Ushn Campøsh"
+2: "Aner ikke"
+EOF
+read resp
+
+if [[ $resp == "1" ]]; then
+
+	cat << EOF
+"Flaks!" Sier han, "Det er 500m den veien.".
+Du åpner øynene akkurat nok til å se hvor han peker.
+"Det er en annen her som også skal dit... han er litt mer edru, kanskje dere kan gå sammen?"
+"Det... er nok... lurt" Svarer du.
+EOF
+	echo "1" >> .poeng_$SPILLER
+	cd
+
+else
+	echo "Da kan jeg nok ikke hjelpe deg, men du må dra herfra hvertfall"
+	cd ..
+fi
