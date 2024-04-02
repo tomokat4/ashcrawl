@@ -4,8 +4,12 @@
 
 cat << EOF  
 	"Vel vel vel. Hva gjoer du naar du sitter skikkelig i saksa? Er du fortsatt en god person eller driter du fullstendig alt og alle hvis du faar som du vil?
-	Daeven, der staar den der idioten til laerer som ikke liker deg. I god tradisjon er han klart overbetalt, som alle laerere er, og han boetter med cash...ja faktisk bare kontanter fordi han ikke tror på 'data og saant...staten overvaaker deg etc etc'. Du ser lommeboka hans henge litt loest i hans baklomma for aa saa dette ned på bakken. Du kaster deg mot lommeboka og..."
-read -p "du bestemmer deg for aa:(du må skrive inn svaret: TaPengene eller GiTilbakeAlt " svar
+	Daeven, der staar den der idioten til laerer som ikke liker deg. I god tradisjon er han ekstremt overbetalt, som alle laerere er, og han boetter med cash...ja faktisk bare kontanter fordi han ikke tror på 'data og saant...staten overvaaker deg etc etc'. Du ser lommeboka hans henge litt loest i hans baklomma for aa saa dette ned på bakken. Du kaster deg mot lommeboka og..."
+
+
+EOF
+
+read -p "du bestemmer deg for aa:(du må skrive inn svaret: TaPengene eller GiTilbakeAlt: " svar
 
 # Konverter svaret til små bokstaver slik at svaret kan bli riktig.
 svar=$(echo "$svar" | tr '[:upper:]' '[:lower:]')
@@ -18,14 +22,21 @@ fi
 
 # Er svaret riktig
 if [ "$svar" == "gitilbakealt" ]; then
-    echo "'Hei, du mistet denne' sier du til laereren. 'Takk $SPILLER, det var meget snilt av deg. Du har alltid virket som en grei karl - men jeg har hoert at du sliter med oekonomien..her ta litt penger som takk.' Aa du som trodde at han mente at du var en idiot. Vel...lucky you at laereren hadde hoye tanker om deg da."
-mv .LittPenger LittPenger
+    echo "'Hei, du mistet denne' sier du til laereren. 'Takk $SPILLER, det var meget snilt av deg. Du har alltid virket som en grei karl - men jeg har hoert at du sliter med oekonomien..her ta LittPenger som takk.' Aa du som trodde at han mente at du var en idiot. Vel...lucky you at laereren hadde hoye tanker om deg da."
+
+    cp .LittPenger LittPenger
+
 chmod +r LittPenger
-if [ "$svar" == "tapengene" ]; then
-    echo " Toeffing! Stjeler fra en som snart er pensjonist. Bra jobba *langsom applaus*..virkelig"
+
+
+elif [ "$svar" == "tapengene" ]; then
+    echo " Toeffing! Stjeler fra en som snart er pensjonist. Bra jobba *langsom applaus*..virkelig. Men du fikk ihf LittPenger. Nå kanskje du får kjoept deg en billett hjem."
 	mv .LittPenger LittPenger
 	chmod +r LittPenger
     # Trekk fra ett poeng for DUSTETE svar
     # Forutsetter at poengene er lagret i filen .poeng_$SPILLER
-    poeng=$(cat ".poeng_$SPILLER")
-    echo "$((poeng - 1))" > ".poeng_$SPILLER"
+    #poeng=$(cat ".poeng_$SPILLER")
+    #echo "$((poeng - 1))" > ".poeng_$SPILLER"
+
+fi
+

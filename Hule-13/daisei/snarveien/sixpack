@@ -45,9 +45,9 @@ done
 
 if [ $i -eq 5 ]; then
 
-ln -s /home/263697/spill/Hule-13/daisei/togstasjon /home/263697/spill/Hule-13/daisei/snarveien/DaRealSnarvei
+ln -s /home/263697/spill/Hule-13/daisei/togstasjon /home/263697/spill/Hule-13/daisei/snarveien/togstasjon
 cat << EOF
-Naa snakkkkkker vi DUDE! 6er ibloe..sjekk ls. Nå har vi ny snarvie... kjoooer den ekte snarveien! YEEIIHOOOO!
+Naa snakkkkkker vi DUDE! 6er ibloe..sjekk ls. Nå har vi ny snarvie..til togstasjon. Lets go there! YEEIIHOOOO!
 EOF
 
 fi

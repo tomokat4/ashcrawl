@@ -20,14 +20,16 @@ if [ "$svar" -eq 1 ] && [ -f "LittPenger" ]; then
 
 cat << EOF
 Du smiler og tar frem LittPenger som du fikk av laereren - men akurat i det oyeblikke du skal rekke over pengene ser du noe i periferien. En person ikledd moerk hoodie (what else?!). Han klinker til deg hart i hodet og du faller i bakken og mister pengene. "EASY COME, EASY GO" skriker tyven og loeper sin vei.
-Adrenalinet kikker til og du bli klar i hodet og bestemmer deg for å ./ FoelgeEtterTyven....nei faktisk. Det har vaert en mildt sagt lang natt og du er sulten. Du husker at kebabsjappa er like ved og bestemmer deg for å ta en tur dit og håpe på litt bedre karma der.
+Adrenalinet kikker inn og du blir helt klar i hodet. Du bestemmer deg for å ./ FoelgeEtterTy....nei faktisk. Det har, mildt sagt, vaert en lang natt - og du er sulten. Du husker at kebabsjappa er like ved og bestemmer deg for å ta en tur dit...og håper på litt bedre karma der.
 EOF
 
-ln -s /home/263697/spill/Hule-13/daisei/togstasjon/kebabsjappa 
+ln -s /home/263697/spill/Hule-13/daisei/togstasjon/nattmat /home/2693697/Hule-13/amieda/nattmat
 
 
 else
-	echo "
+	echo "LOL som dere drittunger kaller det. Ingen penger. INGEN BILLETT!"
+
+fi
 
 
 
