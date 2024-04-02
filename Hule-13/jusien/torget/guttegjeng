@@ -3,7 +3,7 @@
 
 # Sjekker om den skjulte filen ".Ett_par_fete_air_jordans" eksisterer i gjeldende katalog
 if [ ! -f ".Ett_par_fete_air_jordans" ]; then
-    echo "Bro! Du hakke på sko. Guttene ler av deg og fortsetter videre. Du MÅ finne skoa dine, mann!"
+    echo "Guttene bare ler av deg og fortsetter videre. Kanskje ikke folk tar deg seriøst?!"
     exit 1  # Avslutter skriptet hvis filen ikke eksisterer
 fi
 

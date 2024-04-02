@@ -1,9 +1,9 @@
 
 #!/bin/bash
 
-# Velkommen til utfordringen på The Rusty Tankard!
+#Utfordringen på The Rusty Tankard!
 
-echo "Bartenderen ser på deg og sier: 'Hva er alltid foran deg, men du kan aldri se det?'"
+echo "Du spør bartenderen om hjelp til hvordan du skal komme deg hjem, bartenderen er en litt rar type og ser på deg og sier: 'Hva er alltid foran deg, men du kan aldri se det?'"
 read -p "Ditt svar: " svar
 
 # Konverter svaret til små bokstaver
@@ -17,7 +17,7 @@ fi
 
 # Sjekk om svaret er riktig
 if [ "$svar" == "fremtiden" ]; then
-    echo "Bartenderen smiler bredt og gir deg en belønning."
+    echo "Bartenderen smiler bredt og sier, for å komme deg hjem så må du være ressurssterk og klare prøvelsene som kommer. Okei mega weird ting å si tenker du og forstetter videre"
 mv .maleri maleri
 chmod +r maleri
 else
