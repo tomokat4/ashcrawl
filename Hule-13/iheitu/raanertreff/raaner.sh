@@ -1,7 +1,16 @@
-ankke med en råner.
+#!/bin/bash
 
-har du snus lager han en symlink til _________ å du drar videre
+if [ -e /home/260841/spill/Hule-13/iheitu/narvesen/.poeng_$SPILLER ]; then
+	ln -s /home/260841/spill/Hule-13/ahyooj/parkeringsplass /home/260841/spill/Hule-13/iheitu/raanertreff/fremme
+	cat << EOF
+dette står vis du har snus
+EOF
 
-kanskej du kan kjøpe snus te mæ på narvesen
+	else
+		cat << EOF
+dette står vis du ikke har snus
 
+EOF
+
+fi
 
