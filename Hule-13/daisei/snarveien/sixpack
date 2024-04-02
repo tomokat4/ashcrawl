@@ -1,0 +1,53 @@
+#!/bin/bash
+
+cat << EOF
+
+Aah en sekser akkurat naar du trenger det som aller mest...midt i natten i en moerk skog - excellent. Hva kan gaa galt? Men du soekte deg ikke til ingenjoerstudier fordi du ikke likte aa ta... tvilsomme livsbesluttninger. Men, oel er alltid godt, tenker du, og fyrer loes på sixpacken.
+
+*klunk**klunk**klunk* 
+Deilig. Tar du en til?
+1. Ja, seff. Hva kan gå galt?
+2. Nei, dette er ikke en god idé!
+
+EOF
+
+i=0
+while [ $i -lt 5 ]
+do
+
+	read -p "Velg et alternativ (1 eller 2): " VALG
+
+		if [ "$VALG" -eq 1 ]; then
+ 
+			cat << EOF
+
+*klunk**klunk**klunk* 
+Deilig. Tar du en til?
+1. Ja, seff. Hva kan gå galt?
+2. Nei, dette er ikke en god idé!   
+
+
+EOF
+((i++))
+
+	elif [ "$VALG" -eq 2 ]; then
+
+		echo " Drkke oel alene i en moerk skog?? Hva tenker du med?! Du må komme deg hjem og faa noen minutter soevn foer Linux-eksamen imorgen. Kjoer Snarveien."
+		exit 0
+
+	else
+		echo "nei du maa taste 1 eller 2!!!..hvor vanskelig kan det vaere?!"
+
+
+fi
+
+done 
+
+if [ $i -eq 5 ]; then
+
+ln -s /home/263697/spill/Hule-13/daisei/togstasjon /home/263697/spill/Hule-13/daisei/snarveien/DaRealSnarvei
+cat << EOF
+Naa snakkkkkker vi DUDE! 6er ibloe..sjekk ls. Nå har vi ny snarvie... kjoooer den ekte snarveien! YEEIIHOOOO!
+EOF
+
+fi

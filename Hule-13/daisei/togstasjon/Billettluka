@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#Sur gammel kjaerring i luka
+
+cat << EOF
+
+Du skjangler mot luka og damen sier "Ta et steg tilbake...du stinker noe jaevlig!"
+SURKJAERRING ...tenker du og tar et steg tilbake. " Jeg maa komme meg hjem..." sier du mens du prover aa holde deg vertikal.
+"Vel...det koster penger skjoenner du. Ikke noen veldedighet her, gutt... Har du penger...hvis ikke er det best for deg at du gaar foer jeg tilkaller politi!"
+
+Har du LittPenger?
+ 
+1: "Ja seff...surkjaerring!"
+2: "Nei men gi meg billetten da!!"
+
+EOF
+
+read -p "Ditt svar: " svar
+if [ "$svar" -eq 1 ] && [ -f "LittPenger" ]; then 
+
+cat << EOF
+Du smiler og tar frem LittPenger som du fikk av laereren - men akurat i det oyeblikke du skal rekke over pengene ser du noe i periferien. En person ikledd moerk hoodie (what else?!). Han klinker til deg hart i hodet og du faller i bakken og mister pengene. "EASY COME, EASY GO" skriker tyven og loeper sin vei.
+Adrenalinet kikker til og du bli klar i hodet og bestemmer deg for å ./ FoelgeEtterTyven....nei faktisk. Det har vaert en mildt sagt lang natt og du er sulten. Du husker at kebabsjappa er like ved og bestemmer deg for å ta en tur dit og håpe på litt bedre karma der.
+EOF
+
+ln -s /home/263697/spill/Hule-13/daisei/togstasjon/kebabsjappa 
+
+
+else
+	echo "
+
+
+
+
+
