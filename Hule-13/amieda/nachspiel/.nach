@@ -29,9 +29,9 @@ Du åpner øynene akkurat nok til å se hvor han peker.
 "Det... er nok... lurt" Svarer du.
 EOF
 	echo "1" >> .poeng_$SPILLER
-	cd
+	mkdir campus
+	touch campus/seng
 
 else
 	echo "Da kan jeg nok ikke hjelpe deg, men du må dra herfra hvertfall"
-	cd ..
 fi

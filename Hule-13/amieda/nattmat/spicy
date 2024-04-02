@@ -1,0 +1,33 @@
+#!/bin/bash
+
+cat << EOF
+"Spicy Kebab! Kan jeg ta din bestilling? Stor eller liten, sterk/middels eller mild?"
+Hmmm... Magen skriker etter en 'bab, og det lukter helt herlig.
+
+Hint: Det er kun ett riktig svar.
+
+1: Stor og sterk
+2: Stor og middels
+3: Stor og mild
+4: liten og sterk
+5: liten og middels
+6: liten og mild
+
+EOF
+read resp
+
+if [[ $resp == "6" ]]; then
+	sleep 3
+	echo "Her er den, kos deg!"
+	echo "1" >> .poeng_$SPILLER
+	echo "Du finner en benk og koser deg med kebaben..."
+	sleep 3
+	echo "Nå er du klar for mer eventyr!"
+else
+	echo "Her er den, kos deg!"
+	rm /home/261675/spill/Hule-13/amieda/pirattaxi/.poeng_$SPILLER 
+	echo "Du finner en benk og koser deg med kebaben..."
+	sleep 3
+	echo "Det ble litt for mye, og nå kommer det opp igjen!"
+fi
+

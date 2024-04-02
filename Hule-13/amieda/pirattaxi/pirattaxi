@@ -17,7 +17,6 @@ read resp
 
 if [[ $resp == "y" ]]; then
 	ln -s /home/261675/spill/Hule-13/iheitu/raanertreff /home/261675/spill/Hule-13/amieda/pirattaxi/
-	cd raanertreff
 	echo "1" >> .poeng_$SPILLER	
 	cat << EOF
 	Etter en liten kjøretur med dunkende musikk og roping kommer dere fram til treffet.
