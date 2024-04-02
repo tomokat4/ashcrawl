@@ -9,12 +9,17 @@ Skriv '1' for å stjele, '2' for å betale normalt
 EOF
 read VALG
 
-if [ "$VALG" = 1 ]; then
+if [ "$VALG" = 1 -a -e /home/260841/spill/Hule-13/iheitu/karok_senen/.poeng_$SPILLER ]; then
     rm /home/260841/spill/Hule-13/iheitu/karok_senen/.poeng_$SPILLER
     cat << EOF
-Du feilet. Mistede poeng fra karaoke.
+fy fy ikke lov å stjele. nå mstede du pengene du vant fra karaoke.
 EOF
     exit
+
+elif [ "$VALG" = 1 ]; then
+	cat << EOF
+fy fy ikke lov å stjele. nå er du både blakk og kriminell
+EOF
 
 elif [ "$VALG" = 2 ]; then
     if [ -e /home/260841/spill/Hule-13/iheitu/karok_senen/.poeng_$SPILLER ]; then

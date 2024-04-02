@@ -138,7 +138,7 @@ EOF
     if [ "$RESP" = "ja" ]; then
         echo "det ligger et sanghefte sanghefte med sangtekster på borde der borte."
 	
-	rm sanghefte
+	
 	touch sanghefte
 	cat << EOF > sanghefte
 sanghefte for dagens karoke!!
