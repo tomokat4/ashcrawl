@@ -25,6 +25,9 @@ EOF
 
 ln -s ~/spill/Hule-13/daisei/togstasjon/nattmat ~/spill/Hule-13/amieda/nattmat
 
+# Gir spilleren 1 poeng.
+poeng=$(cat ".poeng_$SPILLER")
+    echo "$((poeng + 1))" > ".poeng_$SPILLER"
 
 else
 	echo "LOL som dere drittunger kaller det. Ingen penger. INGEN BILLETT!"
