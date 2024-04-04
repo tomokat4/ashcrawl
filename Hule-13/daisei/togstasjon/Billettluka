@@ -23,7 +23,7 @@ Du smiler og tar frem LittPenger som du fikk av laereren - men akurat i det oyeb
 Adrenalinet kikker inn og du blir helt klar i hodet. Du bestemmer deg for å ./ FoelgeEtterTy....nei faktisk. Det har, mildt sagt, vaert en lang natt - og du er sulten. Du husker at kebabsjappa er like ved og bestemmer deg for å ta en tur dit...og håper på litt bedre karma der.
 EOF
 
-ln -s /home/263697/spill/Hule-13/daisei/togstasjon/nattmat /home/2693697/Hule-13/amieda/nattmat
+ln -s ~/spill/Hule-13/daisei/togstasjon/nattmat ~/spill/Hule-13/amieda/nattmat
 
 
 else

@@ -9,10 +9,12 @@ Deilig. Tar du en til?
 1. Ja, seff. Hva kan gå galt?
 2. Nei, dette er ikke en god idé!
 
+oelcounter = 1
+
 EOF
 
-i=0
-while [ $i -lt 5 ]
+i=2
+while [ $i -lt 7 ];
 do
 
 	read -p "Velg et alternativ (1 eller 2): " VALG
@@ -26,6 +28,7 @@ Deilig. Tar du en til?
 1. Ja, seff. Hva kan gå galt?
 2. Nei, dette er ikke en god idé!   
 
+oelcounter = $i 
 
 EOF
 ((i++))
@@ -43,11 +46,16 @@ fi
 
 done 
 
-if [ $i -eq 5 ]; then
+if [ $i -eq 7 ]; then
 
-ln -s /home/263697/spill/Hule-13/daisei/togstasjon /home/263697/spill/Hule-13/daisei/snarveien/togstasjon
+ln -s ~/spill/Hule-13/daisei/togstasjon ~/spill/Hule-13/daisei/snarveien/SnarveienTilTogstasjon
 cat << EOF
-Naa snakkkkkker vi DUDE! 6er ibloe..sjekk ls. Nå har vi ny snarvie..til togstasjon. Lets go there! YEEIIHOOOO!
+Naa snakkkkkker vi DUDE! 6er ibloe..sjekk ls. Nå har vi ny snarvei..til togstasjon. Lets go there! YEEIIHOOOO!
 EOF
 
+
+
+# Gir spilleren 1 poeng.
+poeng=$(cat ".poeng_$SPILLER")
+    echo "$((poeng + 1))" > ".poeng_$SPILLER"
 fi

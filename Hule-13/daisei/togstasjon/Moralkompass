@@ -24,19 +24,24 @@ fi
 if [ "$svar" == "gitilbakealt" ]; then
     echo "'Hei, du mistet denne' sier du til laereren. 'Takk $SPILLER, det var meget snilt av deg. Du har alltid virket som en grei karl - men jeg har hoert at du sliter med oekonomien..her ta LittPenger som takk.' Aa du som trodde at han mente at du var en idiot. Vel...lucky you at laereren hadde hoye tanker om deg da."
 
+    #viser en skjult fil og gir 1 poeng
     cp .LittPenger LittPenger
+    
+	poeng=$(cat ".poeng_$SPILLER")
+    	echo "$((poeng + 1))" > ".poeng_$SPILLER"
 
-chmod +r LittPenger
 
 
 elif [ "$svar" == "tapengene" ]; then
     echo " Toeffing! Stjeler fra en som snart er pensjonist. Bra jobba *langsom applaus*..virkelig. Men du fikk ihf LittPenger. Nå kanskje du får kjoept deg en billett hjem."
-	mv .LittPenger LittPenger
-	chmod +r LittPenger
+	
+    #viser en skjult fil
+    cp .LittPenger LittPenger
+	
     # Trekk fra ett poeng for DUSTETE svar
     # Forutsetter at poengene er lagret i filen .poeng_$SPILLER
-    #poeng=$(cat ".poeng_$SPILLER")
-    #echo "$((poeng - 1))" > ".poeng_$SPILLER"
+    poeng=$(cat ".poeng_$SPILLER")
+    echo "$((poeng - 1))" > ".poeng_$SPILLER"
 
 fi
 

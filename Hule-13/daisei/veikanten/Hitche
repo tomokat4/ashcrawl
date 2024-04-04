@@ -1,0 +1,27 @@
+!#/bin/bash
+
+# Hitch-a-ride quiz!
+
+cat << EOF
+"Du har ventet i over 1 time og foerst naa ser du en bil...og den stopper! Huzzaa!!
+En gammel, rustig amerikaner stopper og foereren spoer deg:
+
+"Joess...du ser litt vilsen ut kamerat. Vi har god...vel..vi har plass i bilen i bagasjen og du ser ut aa foretrekke det foran en lang gaatur. Men foer du faar hoppe inn i bagasjen i verdens kuleste bil må du svare riktig på noen enkle spoersmal."
+
+" Fullfoer setningen: "Klima"krisen er"..
+1. fejk!
+2. i foelge statistikk innhentet fra hele verden noe vi alle maa ta paa alvor."  
+EOF
+
+read -p "Ditt svar: " svar
+
+if [ "$svar" -eq 1 ]; then
+
+cat << EOF
+Du har skjoent det kamerat! Alt er fejk news. Hopp inn i bagasjen. Det lukter litt tiss men det doer du ikke av - eller hva?
+
+EOF
+
+ln -s ~/spill/Hule-13/iheitu/raanertreff ~/spill/Hule-13/daisei/veikanten/BilTilRaanertreff
+
+fi
