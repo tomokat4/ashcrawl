@@ -33,15 +33,15 @@ if [ "$svar" == "gitilbakealt" ]; then
 
 
 elif [ "$svar" == "tapengene" ]; then
-    echo " Toeffing! Stjeler fra en som snart er pensjonist. Bra jobba *langsom applaus*..virkelig. Men du fikk ihf LittPenger. Nå kanskje du får kjoept deg en billett hjem."
+    echo " Toeffing! Stjeler fra en som snart er pensjonist. Bra jobba *langsom applaus*..virkelig. Men du fikk ihf LittPenger. Nå kanskje du får kjoept deg en billett hjem i ./Billettluka"
 	
     #viser en skjult fil
     cp .LittPenger LittPenger
 	
     # Trekk fra ett poeng for DUSTETE svar
     # Forutsetter at poengene er lagret i filen .poeng_$SPILLER
-    poeng=$(cat ".poeng_$SPILLER")
-    echo "$((poeng - 1))" > ".poeng_$SPILLER"
+    rm ~/spill/snarveien/.poeng_$SPILLER
+    
 
 fi
 
